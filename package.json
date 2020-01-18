@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Node Crypto Chat server",
+  "keywords": [],
+  "author": "Jacob Evans <jacobwevanspdx@gmail.com> (https://jacobwevans.me)",
+  "license": "MIT",
+  "homepage": "https://github.com/crypto-chat-node/server#readme",
+  "bugs": {
+    "url": "https://github.com/crypto-chat-node/server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crypto-chat-node/server.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production && node ./index.js",
+    "dev": "cross-env NODE_ENV=development && node./index.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
+}
