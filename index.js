@@ -3,9 +3,11 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const httpsOptions = {
-  key: fs.readFileSync(process.env.KEY_FILE),
-  cert: fs.readFileSync(process.env.CERT_FILE),
+  key: fs.readFileSync(process.env.KEY_FILE, "utf-8"),
+  cert: fs.readFileSync(process.env.CERT_FILE, "utf-8"),
+  ca: fs.readFileSync(process.env.CA_FILE, "utf-8")
 };
+const httpServer = require("http").createServer(app);
 const server = require("https").createServer(httpsOptions, app);
 
 // Webserver Config
@@ -26,4 +28,8 @@ require("./lib/socket.js")(server);
 const port = process.env.PORT || 443;
 server.listen(port, function() {
   console.log(`Server listening on ${port}`);
+});
+const httpPort = process.env.HTTP_PORT || 80;
+httpServer.listen(httpPort, function() {
+  console.log(`Server listening on ${httpPort}`);
 });
