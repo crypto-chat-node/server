@@ -1,7 +1,7 @@
 "use strict";
 // Load Enviorment Config
 require("dotenv").config({
-  path: __dirname
+  path: require("path").join(__dirname, ".env")
 });
 // Load required modules
 const path = require("path");
