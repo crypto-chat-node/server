@@ -1,6 +1,8 @@
 "use strict";
 // Load Enviorment Config
-require("dotenv").config();
+require("dotenv").config({
+  path: __dirname
+});
 // Load required modules
 const path = require("path");
 const express = require("express");
