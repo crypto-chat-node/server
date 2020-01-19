@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Jacob Evans" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ERROR 404 - Page Not Found</title>
+    <%- include("partials/head-add.ejs"); %>
   </head>
   <body>
-    Cannot find page:
-    <%=request.hostname%><%=request.originalUrl%>
+    <%- include("partials/nav.ejs"); %>
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <h1>Cannot find page:
+          <%=request.hostname%><%=request.originalUrl%></h1>
+        </div>
+      </div>
+    </div>
+    <%- include("partials/body-add.ejs"); %>
   </body>
 </html>
