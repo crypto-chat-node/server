@@ -31,6 +31,6 @@
     "helmet": "^3.21.2",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
